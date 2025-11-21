@@ -25,19 +25,19 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-zinc-900 font-sans flex flex-col">
-      {/* Header */}
+      
       <header className="w-full py-4 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center bg-orange-500 text-white shadow-md">
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-wide mb-2 sm:mb-0">Angelika's Page</h1>
+        <h1 className="text-5xl sm:text-5xl font-bold tracking-wide mb-2 sm:mb-0">Angelika's Page</h1>
         <nav className="space-x-0 sm:space-x-6 flex flex-col sm:flex-row items-center text-base sm:text-lg">
-          <Link href="/" className="hover:underline mb-1 sm:mb-0">Home</Link>
-          <Link href="/about" className="hover:underline mb-1 sm:mb-0">About</Link>
+          <Link href="/" className="hidden">Home</Link>
+         <Link href="/about" className="hover:underline mb-1 sm:mb-0">About</Link>
           <Link href="/contact" className="hover:underline mb-1 sm:mb-0">Contact</Link>
           <Link href="/education" className="hover:underline mb-1 sm:mb-0">Education</Link>
           <Link href="/hobbies" className="hover:underline">Hobbies</Link>
         </nav>
+
       </header>
 
-      {/* Hero Section */}
       <section className="w-full flex flex-col items-center text-center mt-16 px-4 sm:px-6">
         <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-orange-600">Welcome to My Personal Website</h2>
         <p className="max-w-full sm:max-w-xl opacity-80 mb-6 text-base sm:text-lg">
@@ -48,7 +48,6 @@ export default function Home() {
         </Button>
       </section>
 
-      {/* Featured Stories */}
       <section className="mt-16 px-4 sm:px-6 text-center">
         <h3 className="text-2xl sm:text-3xl font-bold text-orange-600 mb-6">Featured Stories</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-full sm:max-w-5xl mx-auto">

@@ -6,9 +6,9 @@ import Image from "next/image";
 export default function Contact() {
   return (
     <div className="min-h-screen bg-white text-zinc-900 font-sans flex flex-col">
-      {/* Header */}
+      
       <header className="w-full py-4 px-4 sm:px-6 flex justify-between items-center bg-orange-500 text-white shadow-md">
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-wide">Angelika's Page</h1>
+        <h1 className="text-5xl sm:text-5xl font-bold tracking-wide">Angelika's Page</h1>
         <Link
           href="/"
           className="bg-white text-orange-500 px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-100 transition"
@@ -16,8 +16,7 @@ export default function Contact() {
           Back to Home
         </Link>
       </header>
-
-      {/* Contact Card */}
+     
       <section className="py-16 px-4 sm:px-6 md:px-10 flex flex-col items-center">
         <Card className="max-w-md w-full shadow-lg rounded-xl border border-orange-100">
           <CardContent className="space-y-4 text-center">
@@ -38,7 +37,6 @@ export default function Contact() {
               </a>
             </p>
 
-            {/* Image below */}
             <div className="w-32 h-32 relative mx-auto mt-4">
               <Image
                 src="/gifs/happy.gif"
