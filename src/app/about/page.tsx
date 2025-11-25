@@ -1,34 +1,44 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-orange-50 text-zinc-900 font-sans flex flex-col">
-      
-      <header className="w-full py-4 px-4 sm:px-6 flex justify-between items-center bg-orange-500 text-white shadow-md">
-        <h1 className="text-5xl sm:text-5xl font-bold tracking-wide">Angelika's Page</h1>
+    <div className="min-h-screen bg-[#0d0d0d] text-white font-sans flex flex-col">
+
+      {/* Header */}
+      <header className="w-full py-4 px-6 flex justify-between items-center bg-[#1a1a1a] text-white shadow-md border-b border-[#262626]">
+        <h1 className="text-5xl font-bold tracking-wide text-[#ff6b00]">Angelika's Page</h1>
         <Link
           href="/"
-          className="bg-white text-orange-500 px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-100 transition"
+          className="bg-[#ff6b00] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#e86400] transition"
         >
           Back to Home
         </Link>
       </header>
 
-      <section className="py-16 px-4 sm:px-6 md:px-10 text-center flex justify-center">
-        <Card className="max-w-md w-full shadow-lg rounded-xl border border-orange-100">
-          <CardContent className="space-y-4">
-            <h1 className="text-2xl sm:text-3xl font-bold text-orange-600">About Me</h1>
-            <p className="text-zinc-700 text-base sm:text-lg leading-relaxed">
-              My name is <span className="font-semibold">Angelika Abarientos</span>. I am 20 years old and a second-year BSIT college student.
-              I'm a passionate student who enjoys creating cozy, simple, and story-inspired designs.
+      {/* Content */}
+      <section className="py-16 px-6 sm:px-12 flex justify-center">
+        <Card className="max-w-md w-full bg-[#1a1a1a] border border-[#262626] rounded-xl shadow-lg hover:shadow-xl transition">
+          <CardContent className="space-y-6 text-center">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#ff6b00]">About Me</h1>
+            
+            <p className="text-zinc-300 text-base sm:text-lg leading-relaxed">
+              Hello! My name is <span className="font-semibold">Angelika Abarientos</span>. 
+              I am 20 years old and currently a second-year BSIT student. I enjoy crafting cozy, 
+              story-inspired designs, exploring literature, and sharing my personal creations.
             </p>
-            <div className="flex justify-center">
-              <img
+
+            <div className="w-52 h-52 relative mx-auto rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300">
+              <Image
                 src="/stories/pic.jpg"
-              alt="About"
-              className="w-50 sm:w-50 h-50 sm:h-50 object-cover rounded-lg shadow-md"
+                alt="Angelika Abarientos"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-xl"
               />
             </div>
           </CardContent>

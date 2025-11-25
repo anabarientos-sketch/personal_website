@@ -5,49 +5,48 @@ import Image from "next/image";
 
 export default function Hobbies() {
   const hobbies = [
-    {
-      name: "Reading (fiction, non-fiction, poetry, comics)",
+    { 
+      name: "Reading (fiction, non-fiction, poetry, comics)", 
       image: "/gifs/book-flip.gif",
+      description: "Exploring various genres to gain knowledge, improve imagination, and enjoy storytelling."
     },
-    {
-      name: "Video gaming (PC, console, mobile)",
+    { 
+      name: "Video gaming (PC, console, mobile)", 
       image: "/gifs/game.gif",
+      description: "Engaging in immersive games to challenge skills, strategy, and creativity."
     },
-    {
-      name: "Cycling",
+    { 
+      name: "Cycling", 
       image: "/gifs/bike.gif",
+      description: "Staying active and exploring outdoors while enjoying the thrill of cycling."
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white text-zinc-900 font-sans flex flex-col">
-      
-      <header className="w-full py-4 px-4 sm:px-6 flex justify-between items-center bg-orange-500 text-white shadow-md">
-        <h1 className="text-5xl sm:text-5xl font-bold tracking-wide">Angelika's Page</h1>
+    <div className="min-h-screen bg-[#0d0d0d] text-white font-sans flex flex-col">
+
+      {/* Header */}
+      <header className="w-full py-4 px-6 flex justify-between items-center bg-[#1a1a1a] text-white shadow-md border-b border-[#262626]">
+        <h1 className="text-5xl font-bold tracking-wide text-[#ff6b00]">Angelika's Page</h1>
         <Link
           href="/"
-          className="bg-white text-orange-500 px-3 sm:px-4 py-1 sm:py-2 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-100 transition"
+          className="bg-[#ff6b00] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#e86400] transition"
         >
           Back to Home
         </Link>
       </header>
 
-      <section className="py-16 px-4 sm:px-6 md:px-10 text-center">
-        <h1 className="text-2xl sm:text-3xl font-bold text-orange-600 mb-6">Hobbies</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-full sm:max-w-5xl mx-auto">
-          {hobbies.map((hobby, index) => (
-            <Card key={index} className="shadow-lg rounded-xl border border-orange-100">
+      <section className="py-16 px-6 sm:px-12 text-center">
+        <h1 className="text-2xl sm:text-3xl font-bold text-[#ff6b00] mb-6">Hobbies</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {hobbies.map((hobby, i) => (
+            <Card key={i} className="bg-[#1a1a1a] border border-[#262626] rounded-xl shadow-lg hover:shadow-xl transition">
               <CardContent className="text-center space-y-3">
                 <div className="w-full h-40 relative rounded-lg overflow-hidden">
-                  <Image
-                    src={hobby.image}
-                    alt={hobby.name}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="rounded-lg"
-                  />
+                  <Image src={hobby.image} alt={hobby.name} fill style={{ objectFit: "cover" }} className="rounded-lg"/>
                 </div>
-                <p className="text-base sm:text-lg text-zinc-700 font-medium">{hobby.name}</p>
+                <p className="text-zinc-300 text-base sm:text-lg font-medium">{hobby.name}</p>
+                <p className="text-zinc-400 text-sm">{hobby.description}</p>
               </CardContent>
             </Card>
           ))}
